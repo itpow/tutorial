@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+use App\Entity\Tutorial;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class NginxController extends AbstractController
@@ -8,6 +9,10 @@ class NginxController extends AbstractController
     //your page
     public function index()
     {
-        return $this->render('base.html.twig', []);
+        $tutorial = $this->getDoctrine()
+            ->getRepository(Tutorial::class)
+            ->find(1);
+
+        return $this->render('base.html.twig', ['tutorial' => $tutorial]);
     }
 }
