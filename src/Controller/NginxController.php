@@ -28,7 +28,7 @@ class NginxController extends AbstractController
         return $this->render('base.html.twig', [
             'tutorial' => $tutorial,
             'tutorialContents' => $tutorialContents,
-            'contentData' => $contentData[0]
+            'contentData' => $contentData[0] ?? null
         ]);
     }
 }
