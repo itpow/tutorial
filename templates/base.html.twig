@@ -47,7 +47,7 @@
                 <div class="offcanvas-body">
                     <ul>
                         {% for contents in tutorialContents %}
-                            <li>{{ contents.title }}</li>
+                            <li>{{ contents.title|default('') }}</li>
                         {% endfor %}
 {#                        <li class="active">Let’s start#}
 {#                            <ul>#}
@@ -67,10 +67,10 @@
     <main>
         <section class="workspace">
             <nav class="workspace__nav">
-                <div class="workspace__nav__title">{{ tutorial.title }}</div>
+                <div class="workspace__nav__title">{{ tutorial.title|default('') }}</div>
             </nav>
             <div id="workspace-body" class="workspace__body" data-simplebar>
-                {{ contentData.content|raw }}
+                {{ contentData.content|raw|default('') }}
                 <!-- Article rating -->
 {#                <div class="rating">#}
 {#                    <h5>Please, avaluate the service</h5>#}
