@@ -8,9 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class NginxController extends AbstractController
 {
     const NGINX_TUTORIAL = 1;
-    // This is an action, the function that gives you the content for
-    //your page
+
     public function index()
+    {
+        return $this->redirect('nginx');
+    }
+
+    public function nginx()
     {
 
         $tutorial = $this->getDoctrine()

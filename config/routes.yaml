@@ -1,3 +1,7 @@
 index:
   path: /
   controller: App\Controller\NginxController::index
+
+nginx_tutorial:
+  path: /nginx
+  controller: App\Controller\NginxController::nginx
