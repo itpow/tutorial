@@ -76,6 +76,59 @@
             </nav>
             <div id="workspace-body" class="workspace__body" data-simplebar>
 {#                {{ contentData.content|raw|default('') }}#}
+
+
+                <h1>Как работает веб-сервер Nginx?</h1>
+                <p>Веб - сервер - это программное или аппаратное устройство, которое принимает и отвечает на запросы, сделанные по компьютерной сети.
+                    Другими словами, это компьютер, который принимает какой либо запрос, обрабатывает его с помощью написанного ранее кода (программы),
+                    формирует и отправляет ответ обратно.</p>
+
+                <p>Отличие сервера от ПК небольшое, ПК выполняет пользовательские задачи в виде работы с текстом, графикой, кодом.
+                    Это персональное устройство, которое не предполагает взаимодейстие с другими ПК по компьютерной сети.</p>
+
+                <p>Но из любого ПК всегда можно создать сервер! Установив необходимое программное обеспечение.</p>
+
+                <p>В 2001 году сервер создали программисты Игорь Сысоев и Максим Коновалов, работавшие тогда в Rambler.
+                    В 2004 году компания выпустила первую публичную версию Nginx в виде программного обеспечения с открытым исходным кодом.</p>
+
+                <p>Nginx – это высокопроизводительный веб-сервер, который часто используют для обслуживания сайтов.
+                    Он особенно хорошо справляется с обработкой большого количества параллельных соединений и обслуживанием статического контента.</p>
+
+                <p>Подробнее об истории создания веб-сервера, можно узнать в других статьях.</p>
+
+                <br>
+                <h1>Структура конфигурационного файла</h1>
+
+                <p>Nginx состоит из модулей, которые настраиваются директивами, указанными в конфигурационном файле. Директивы делятся на простые и блочные.</p>
+
+                <p>Простая директива состоит из имени и параметров, разделённых пробелами, и оканчивается точкой с запятой (;).
+                    Блочная директива устроена так же, как и простая директива, но вместо точки с запятой после имени и параметров следует набор
+                    дополнительных инструкций, помещённых внутри фигурных скобок ({и}).
+                    Если у блочной директивы внутри фигурных скобок можно задавать другие директивы, то она называется контекстом.</p>
+
+                <p>Директивы, помещённые в конфигурационном файле вне любого контекста, считаются находящимися в контексте main.
+                    Директивы events и http располагаются в контексте main, server — в http, а location — в server.
+                    Часть строки после символа # считается комментарием.</p>
+                <br>
+                <h1>Конфигурационный файл nginx.conf</h1>
+                <!-- Accordion -->
+{#                <h5 class="mb-3 mt-6">Вопрос/Ответ</h5>#}
+{#                <div class="accordion accordion-flush" id="accordionFlushExample">#}
+{#                    <div class="accordion-item">#}
+{#                        <h2 class="accordion-header" id="flush-headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">What if file nginx.conf was deleted?</button></h2>#}
+{#                        <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">#}
+{#                            <div class="accordion-body">One of the first things that you should notice when looking at the main configuration file is that it appears to be organized in a tree-like structure, defined by sets of brackets (that look like { and }). In Nginx parlance, the areas that these brackets define are called “contexts” because they contain configuration details that are separated according to their area of concern. Basically, these divisions provide an organizational structure along with some conditional logic to decide whether to apply the configurations within.</div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="accordion-item">#}
+{#                        <h2 class="accordion-header" id="flush-headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">What if file nginx.conf was deleted?</button></h2>#}
+{#                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">#}
+{#                            <div class="accordion-body">One of the first things that you should notice when looking at the main configuration file is that it appears to be organized in a tree-like structure, defined by sets of brackets (that look like { and }). In Nginx parlance, the areas that these brackets define are called “contexts” because they contain configuration details that are separated according to their area of concern. Basically, these divisions provide an organizational structure along with some conditional logic to decide whether to apply the configurations within.</div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+
+
                 <!-- Article rating -->
 {#                <div class="rating">#}
 {#                    <h5>Please, avaluate the service</h5>#}
