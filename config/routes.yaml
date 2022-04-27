@@ -5,3 +5,7 @@ index:
 nginx_tutorial:
   path: /nginx
   controller: App\Controller\NginxController::nginx
+
+git_tutorial:
+  path: /git
+  controller: App\Controller\GitController::tutorial
