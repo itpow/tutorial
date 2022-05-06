@@ -9,11 +9,6 @@ class NginxController extends AbstractController
 {
     const NGINX_TUTORIAL = 1;
 
-    public function index()
-    {
-        return $this->redirect('nginx');
-    }
-
     public function nginx()
     {
 
